@@ -25,8 +25,8 @@ Projede nasıl response döneceğimize bağlı olarak burada düzenleme yapılı
 <br>
 <p>Eğer Controller aracılığıyla servisimizi yöneteceksek, servisimize bunu bildirmemeiz gerekir.</p>
 <code>
- public void ConfigureServices(IServiceCollection services)
- {
+ public void ConfigureServices(IServiceCollection services)<br>
+ {<br>
      services.AddControllers();
- }
+ }<br>
 </code>
