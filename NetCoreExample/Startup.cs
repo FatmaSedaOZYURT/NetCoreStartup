@@ -23,7 +23,7 @@ namespace NetCoreExample
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            #region Programcýya detaylý hata fýrlatmak
+            #region Yazýlýmcýya detaylý hata fýrlatmak
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
