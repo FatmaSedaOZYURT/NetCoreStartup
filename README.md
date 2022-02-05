@@ -20,13 +20,22 @@ DependencyInjection ile ilgili.
 
 Projede nasıl response döneceğimize bağlı olarak burada düzenleme yapılır. 
 
+<h1>👩‍💻 Yazılımcı hatalarını detaylı almak için</h1>
+<code>
+ if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+ </code>
+<p>Bo kod yazılır.</p>
+<br>
 <h1>🚀 Controller Tanımlanması</h1>
 <p>Controller tanımlanması için, class'ın <b>ControllerBase</b> class ından kalıtım alması gerekir.</p>
 <br>
 <p>Eğer Controller aracılığıyla servisimizi yöneteceksek, servisimize bunu bildirmemeiz gerekir.</p>
 <code>
- public void ConfigureServices(IServiceCollection services)<br>
- {<br>
+ public void ConfigureServices(IServiceCollection services)
+ {
      services.AddControllers();
- }<br>
+ }
 </code>
