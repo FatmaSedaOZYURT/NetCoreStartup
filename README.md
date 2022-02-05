@@ -21,13 +21,14 @@ DependencyInjection ile ilgili.
 Projede nasıl response döneceğimize bağlı olarak burada düzenleme yapılır. 
 
 <h1>👩‍💻 Yazılımcı hatalarını detaylı almak için</h1>
+<p>Configure metoduna bu kod yazılır.</p>
 <code>
  if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
  </code>
-<p>Bo kod yazılır.</p>
+
 <br>
 <h1>🚀 Controller Tanımlanması</h1>
 <p>Controller tanımlanması için, class'ın <b>ControllerBase</b> class ından kalıtım alması gerekir.</p>
@@ -38,4 +39,15 @@ Projede nasıl response döneceğimize bağlı olarak burada düzenleme yapılı
  {
      services.AddControllers();
  }
+</code>
+
+<h1>🚗 Routing</h1>
+<p>Eğer servisimizi controller ile yönetiyorsak; roting işlemini de ona göre yapmalıyız. </p>
+<p>Configure metoduna bu kod eklenmelidir:<p>
+<code>
+ app.UseEndpoints(endpoints =>
+            {
+                //Artık route lar controller lar aracılığıyla oluşacak. Bu şekilde bunu söylemiş oluyoruz.
+                endpoints.MapControllers();
+            });
 </code>
