@@ -19,3 +19,6 @@ DependencyInjection ile ilgili.
 <h1>Configure Metodu</h1>
 
 Projede nasıl response döneceğimize bağlı olarak burada düzenleme yapılır. 
+
+<h1>🚀 Controller Tanımlanması</h1>
+<p>Controller tanımlanması için, class'ın <b>ControllerBase</b> class ından kalıtım alması gerekir.</p>
