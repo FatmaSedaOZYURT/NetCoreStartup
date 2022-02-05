@@ -22,3 +22,11 @@ Projede nasıl response döneceğimize bağlı olarak burada düzenleme yapılı
 
 <h1>🚀 Controller Tanımlanması</h1>
 <p>Controller tanımlanması için, class'ın <b>ControllerBase</b> class ından kalıtım alması gerekir.</p>
+<br>
+<p>Eğer Controller aracılığıyla servisimizi yöneteceksek, servisimize bunu bildirmemeiz gerekir.</p>
+<code>
+ public void ConfigureServices(IServiceCollection services)
+ {
+     services.AddControllers();
+ }
+</code>
