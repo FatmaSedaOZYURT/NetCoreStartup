@@ -1,0 +1,41 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace NetCoreExample
+{
+    public class Startup
+    {
+        // This method gets called by the runtime. Use this method to add services to the container.
+        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+        public void ConfigureServices(IServiceCollection services)
+        {
+            //Eðer Controller aracýlýðýyla servisimizi yöneteceksek, servisimize bunu eklememiz gerekmektedir.
+            services.AddControllers();
+        }
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            #region Programcýya detaylý hata fýrlatmak
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            #endregion
+            app.UseRouting();
+
+            app.UseEndpoints(endpoints =>
+            {
+                //Artýk route lar controller lar aracýlýðýyla oluþacak. Bu þekilde bunu söylemiþ oluyoruz.
+                endpoints.MapControllers();
+            });
+        }
+    }
+}
