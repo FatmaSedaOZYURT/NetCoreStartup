@@ -51,3 +51,6 @@ Projede nasıl response döneceğimize bağlı olarak burada düzenleme yapılı
                 endpoints.MapControllers();
             });
 </code>
+
+ 
+ Kaynak: <a href='https://github.com/kenanyildirim'>Kenan Yıldırım'ın</a> derslerinden edindiğim bilgidir.
